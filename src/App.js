@@ -42,6 +42,16 @@ function App() {
       });
   }, []);
 
+  function handleFromAmountChange(event) {
+    setAmount(event.target.value);
+    setAmountInFromCurrency(true);
+  }
+
+  function handleToAmountChange(event) {
+    setAmount(event.target.value);
+    setAmountInFromCurrency(false);
+  }
+
   return (
     //? Empty fragment allows us to render more than one tag in 'return'
     <>
@@ -50,6 +60,7 @@ function App() {
         currencyOptions={currencyOptions}
         selectedCurrency={fromCurrency}
         onChangeCurrency={event => setFromCurrency(event.target.value)}
+        onChangeAmount={handleFromAmountChange}
         amount={fromAmount}
       />
       <div className='equals'>=</div>
@@ -57,6 +68,7 @@ function App() {
         currencyOptions={currencyOptions}
         selectedCurrency={toCurrency}
         onChangeCurrency={event => setToCurrency(event.target.value)}
+        onChangeAmount={handleToAmountChange}
         amount={toAmount}
       />
     </>
