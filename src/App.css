@@ -1,7 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:regular,italic,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic);
 
-/* Add variables here */
+:root {
+  /* Light mode */
+  --background-white: ##EBEBEB;
+  --text-primary: #5B3000;
+  --text-secondary: #5D5E60;
+
+  /* Common colors */
+  --color-white: #fff;
+
+  /* Dark mode */
+  --background-black: #222831;
+  --text-primary: #FF8906;
+  --text-secondary: #A7A9BE;
+}
 
 body {
   margin: 0;
@@ -10,15 +23,15 @@ body {
   align-items: center;
   min-height: 100vh;
   text-align: center;
-  background-color: #222831;
+  background-color: var(--background-black);
   font-family: 'Open Sans';
-  color: #A7A9BE;
+  color: var(--text-secondary);
 }
 
 h1 {
   font-family: 'Libre Baskerville';
   font-size: 2.5rem;
-  color: #FF8906;
+  color: var(--text-primary);
   margin-top: -3rem;
   letter-spacing: 2px;
 }
@@ -33,25 +46,25 @@ h1 {
 }
 
 .inputLabel {
-  color: #FF8906;
+  color: var(--text-primary);
 }
 
 .input {
   width: 7rem;
-  background-color: #222831;
-  border: 1px solid #A7A9BE;
+  background-color: var(--background-black);
+  border: 1px solid var(--text-secondary);
   padding: 1rem;
   border-radius: 7px;
-  color: #fff;
+  color: var(--color-white);
 }
 
 select {
   margin-left: .5rem;
-  border: 1px solid #A7A9BE;
+  border: 1px solid var(--text-secondary);
   padding: 1rem;
   border-radius: 7px;
-  color: #fff;
-  background-color: #222831;
+  color: var(--color-white);
+  background-color: var(--background-black);
 }
 
 .equals {
@@ -67,5 +80,5 @@ select {
 }
 
 a {
-  color: #A7A9BE;
+  color: var(--text-secondary);
 }
