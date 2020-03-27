@@ -9,23 +9,29 @@ export default function CurrencyRow(props) {
     amount
   } = props;
   return (
-    <div className='inputArea'>
-      <p className='inputLabel'>Enter 'from' currency</p>
-      <input
-        type='number'
-        className='input'
-        value={amount}
-        onChange={onChangeAmount}
-      />
+    <>
+      <div className='inputContainer'>
+        <div className='inputFrom'>
+          <p className='inputLabel'>Enter currency</p>
+          <input
+            type='number'
+            className='input'
+            value={amount}
+            onChange={onChangeAmount}
+          />
+        </div>
 
-      <p className='inputLabel'>Pick currency</p>
-      <select value={selectedCurrency} onChange={onChangeCurrency}>
-        {currencyOptions.map(option => (
-          <option key={option} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
-    </div>
+        <div className='inputTo'>
+          <p className='inputLabel'>Pick currency</p>
+          <select value={selectedCurrency} onChange={onChangeCurrency}>
+            {currencyOptions.map(option => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+    </>
   );
 }

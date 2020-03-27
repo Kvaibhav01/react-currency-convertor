@@ -3,7 +3,7 @@
 
 :root {
   /* Light mode */
-  --background-white: ##EBEBEB;
+  --background-white: #EBEBEB;
   --text-primary: #5B3000;
   --text-secondary: #5D5E60;
 
@@ -41,12 +41,19 @@ h1 {
   margin-top: -1rem;
 }
 
-/* .inputArea {
-
-} */
+.emojie-switcher {
+  font-size: 1.5rem;
+}
 
 .inputLabel {
-  color: var(--text-primary);
+  text-align: left;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
 .input {
@@ -56,6 +63,7 @@ h1 {
   padding: 1rem;
   border-radius: 7px;
   color: var(--color-white);
+  text-align: center;
 }
 
 select {
@@ -73,6 +81,8 @@ select {
 }
 
 .container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   padding: 5rem 15rem 1rem 15rem;
   box-shadow: 5px 5px 10px rgb(14, 17, 20),
             -5px -5px 10px rgba(194, 194, 194, 0.253);

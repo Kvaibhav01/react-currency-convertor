@@ -8,7 +8,7 @@ export default function ToggleMode() {
     <ThemeConsumer>
       {theme => (
         <ThemeButton
-          variant='primary'
+          variant='dark'
           onClick={e =>
             theme.setTheme(
               theme.mode === 'dark'
@@ -17,7 +17,15 @@ export default function ToggleMode() {
             )
           }
         >
-          Toggle Mode
+          <span
+            className='emojie-switcher'
+            role='img'
+            aria-label='Dark/Light mode button'
+            alt='toggle theme'
+            title='Toggle theme'
+          >
+            🌓
+          </span>
         </ThemeButton>
       )}
     </ThemeConsumer>
