@@ -8,6 +8,7 @@ export default function CurrencyRow(props) {
     onChangeAmount,
     amount
   } = props;
+
   return (
     <>
       <div className='inputContainer'>
