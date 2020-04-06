@@ -92,3 +92,38 @@ select {
 a {
   color: var(--text-secondary);
 }
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+   body {
+     text-align: center;
+     overflow-x: hidden;
+   }
+
+  .container {
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .desc {
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .emojie-switcher {
+    display: none;
+  }
+
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inputLabel {
+    text-align: center;
+  }
+}

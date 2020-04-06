@@ -37,8 +37,8 @@ function App() {
   // This will only run the first time our app loads
   useEffect(() => {
     fetch(BASE_URL)
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         // Get the first currency
         const firstCurrency = Object.keys(data.rates)[0];
         setcurrencyOptions([data.base, ...Object.keys(data.rates)]);
@@ -52,8 +52,8 @@ function App() {
   useEffect(() => {
     if (fromCurrency != null && toCurrency != null) {
       fetch(`${BASE_URL}?base=${fromCurrency}&symbols=${toCurrency}`)
-        .then(res => res.json())
-        .then(data => setExchangeRate(data.rates[toCurrency]));
+        .then((res) => res.json())
+        .then((data) => setExchangeRate(data.rates[toCurrency]));
     }
   }, [fromCurrency, toCurrency]);
 
@@ -69,17 +69,17 @@ function App() {
 
   const getBackground = style('mode', {
     light: '#EBEBEB',
-    dark: '#222831'
+    dark: '#222831',
   });
 
   const getForeground = style('mode', {
     light: '#5D5E60',
-    dark: '#A7A9BE'
+    dark: '#A7A9BE',
   });
 
   const getPrimary = style('mode', {
     light: '#5B3000',
-    dark: '#FF8906'
+    dark: '#FF8906',
   });
 
   const GlobalStyle = createGlobalStyle`
@@ -127,7 +127,7 @@ function App() {
           <CurrencyRow
             currencyOptions={currencyOptions}
             selectedCurrency={fromCurrency}
-            onChangeCurrency={event => setFromCurrency(event.target.value)}
+            onChangeCurrency={(event) => setFromCurrency(event.target.value)}
             onChangeAmount={handleFromAmountChange}
             amount={fromAmount}
           />
@@ -135,7 +135,7 @@ function App() {
           <CurrencyRow
             currencyOptions={currencyOptions}
             selectedCurrency={toCurrency}
-            onChangeCurrency={event => setToCurrency(event.target.value)}
+            onChangeCurrency={(event) => setToCurrency(event.target.value)}
             onChangeAmount={handleToAmountChange}
             amount={toAmount}
           />
