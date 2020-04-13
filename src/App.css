@@ -106,6 +106,7 @@ a {
 
   h1 {
     font-size: 1.3rem;
+    width: max-content;
   }
 
   .desc {
@@ -125,5 +126,17 @@ a {
 
   .inputLabel {
     text-align: center;
+  }
+
+  .equals {
+    margin: .5rem 0 .5rem 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 50%;
+    height: 50%;
+    margin-left: 1rem;
   }
 }
